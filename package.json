@@ -1,11 +1,23 @@
 {
-  "name": "reconf",
+  "name": "@reges-hq/reconf",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/reges-hq/reconf.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reges-hq/reconf.git"
+  },
   "author": "reges-hq",
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.224.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/reges-hq/reconf/issues"
+  },
+  "homepage": "https://github.com/reges-hq/reconf#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": ""
 }
