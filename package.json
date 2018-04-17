@@ -1,0 +1,11 @@
+{
+  "name": "reconf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/reges-hq/reconf.git",
+  "author": "reges-hq",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.224.1"
+  }
+}
