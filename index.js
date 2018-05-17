@@ -24,10 +24,11 @@ module.exports = (config = {}) => {
     let params;
     const configurationsToLoad = [];
     const currentEnvironment = process.env.NODE_ENV;
+    const defaultConfigPath = path.resolve(process.cwd(), '.env.json');
 
     if (!{}.hasOwnProperty.call(config, "useLocal")) config.useLocal = true;
     if (!{}.hasOwnProperty.call(config, "region")) config.region = "eu-west-1";
-    if (config.useLocal) loadFromFile = fs.existsSync("./.env.json");
+    if (config.useLocal) loadFromFile = fs.existsSync(defaultConfigPath);
 
     if ({}.hasOwnProperty.call(config, "default"))
       configurationsToLoad.push("default");
@@ -58,7 +59,7 @@ module.exports = (config = {}) => {
         }
       }
 
-      const configFile = require("./.env.json");
+      const configFile = require(defaultConfigPath);
       for (let param of parametersToLoad) {
         if (configFile[param.key]) {
           process.env[param.name] = configFile[param.key];
